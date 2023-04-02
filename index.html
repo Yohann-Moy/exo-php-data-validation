@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP - Revue de code sur les formulaires</title>
+    <meta name="description" content="Exercice de PHP sur les formulaires - revue de code">
+    <link rel="stylesheet" href="./webfiles/css/style.css">
+</head>
+<body>
+    <!--
+        Consigne :
+        Un certain nombre d'éléments sont manquants ou mal renseingés 
+        dans le formulaire d'inscription déclaré ci-après.
+        A l'aide des conaissances acquises en séances, trouvez puis corrigez ces oublis et erreurs.
+
+        Questions à se poser pour vous aider à trouver ce qu'il manque ou ce qui est mal déclaré :
+        - Quels attributs sont OBLIGATOIRES sur la balise <form> ouvrante ?
+        - De quelle façon vont être envoyées les données ?
+         /!\ Si certaines des données saisies sont à caractère sensibles, quoi privilégier ?
+        - Quels sont les attributs OBLIGATOIRES sur chaque champ de saisie ?
+        - Le type des champs de saisie sont ils adéquats ?
+
+        BON COURAGE ! :)
+
+        APRES CE 1er EXERCICE :
+        Au sein du fichier traitement.php (situé dans le répertoire webfiles/php),
+        procédez au contrôle d'intégrité des données c'est à dire, assurez vous
+        que les données renseignés dans chacun des champs est conforme à ce qui est attendu.
+        (tout est expliqué dans traitement.php).
+
+        Si l'ensemble des champs ont été correctement renseignez affichez "Inscription réussie"
+        Le cas contraire, affichez quel(s) champ(s) n'a / n'ont pas été correctement renseigné(s).
+
+        BONUS : Affichez la / les raisons pour laquelle / lequelles le/les champs n'ont pas 
+        été correctement renseignés.
+        
+        Ex: Le champ prénom n'a pas été correctement renseingé car :
+            Votre saisie comporte plus de 25 caractères
+            Votre saisie comporte un ou plusieurs caractère(s) non conforme(s).
+    -->
+
+    <form>
+        <h1>Inscription</h1>
+        <div>
+            <label for="user-firstname">Votre nom :</label>
+            <input type="text" placeholder="ex: Stiquée" id="user-firstname" required>
+        </div>
+        <div>
+            <label for="user-lastname">Votre prénom :</label>
+            <input type="text" placeholder="ex: Sophie" id="user-lastname" required>
+        </div>
+        <div>
+            <label for="user-email">Votre e-mail :</label>
+            <input type="text" placeholder="ex: sophie.stiquee@gmail.com" id="user-email" required>
+        </div>
+        <div>
+            <label for="user-password">Votre mot de passe :</label>
+            <input type="text" placeholder="**********" id="user-password" required>
+        </div>
+        <div><button type="submit">S'enregistrer</button></div>
+    </form>
+</body>
+</html>
