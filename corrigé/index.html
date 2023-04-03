@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP - Revue de code sur les formulaires</title>
+    <meta name="description" content="Exercice de PHP sur les formulaires - revue de code">
+    <link rel="stylesheet" href="./webfiles/css/style.css">
+</head>
+<body>
+    <!--
+        Au sein du fichier traitement.php (situé dans le répertoire webfiles/php),
+        procédez au contrôle d'intégrité des données c'est à dire, assurez vous
+        que les données renseignés dans chacun des champs est conforme à ce qui est attendu.
+        (tout est expliqué dans traitement.php).
+
+        Si l'ensemble des champs ont été correctement renseignez affichez "Inscription réussie"
+        Le cas contraire, affichez quel(s) champ(s) n'a / n'ont pas été correctement renseigné(s).
+
+        BONUS : Affichez la / les raisons pour laquelle / lequelles le/les champs n'ont pas 
+        été correctement renseignés.
+        
+        Ex: Le champ prénom n'a pas été correctement renseingé car :
+            Votre saisie comporte plus de 25 caractères
+            Votre saisie comporte un ou plusieurs caractère(s) non conforme(s).
+    -->
+
+    <form action="./webfiles/php/traitement.php" method="POST">
+        <h1>Inscription</h1>
+        <div>
+            <label for="user-firstname">Votre prénom :</label>
+            <input type="text" name="firstName" placeholder="ex: Stiquée" id="user-firstname" required>
+        </div>
+        <div>
+            <label for="user-lastname">Votre nom :</label>
+            <input type="text" name="lastName" placeholder="ex: Sophie" id="user-lastname" required>
+        </div>
+        <div>
+            <label for="user-email">Votre e-mail :</label>
+            <input type="email" name="mail" placeholder="ex: sophie.stiquee@gmail.com" id="user-email" required>
+        </div>
+        <div>
+            <label for="user-password">Votre mot de passe :</label>
+            <input type="password" name="motDePasse" placeholder="**********" id="user-password" required>
+        </div>
+        <div><button type="submit">S'enregistrer</button></div>
+    </form>
+</body>
+</html>
